@@ -27,6 +27,7 @@ RUN apt-get update \
     # If any additional gems need to be installed, it should happen before the
     # image cleanup.
     # ==> INSTALL_ADDITIONAL_GEMS_HERE_IF_NEEDED <==
+    && /opt/google-fluentd/embedded/bin/gem install fluent-plugin-kubernetes_metadata_filter \
     # Clean up to reduce image size.
     && apt-get purge -y \
         curl \
