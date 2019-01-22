@@ -28,6 +28,7 @@ RUN apt-get update \
     # image cleanup.
     # ==> INSTALL_ADDITIONAL_GEMS_HERE_IF_NEEDED <==
     && /opt/google-fluentd/embedded/bin/gem install fluent-plugin-kubernetes_metadata_filter \
+    && /opt/google-fluentd/embedded/bin/gem install fluent-plugin-record-modifier \
     # Clean up to reduce image size.
     && apt-get purge -y \
         curl \
